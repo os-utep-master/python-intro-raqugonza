@@ -32,7 +32,16 @@ with open(inputFile, 'r') as inName:
 
 for i in range(len(master)) :
     combination[i] = master[i] +" " +str(counter[i]) + "\n"
+
+
+a = combination
+
+for i in range(len(a)):
+    for j in range(len(a) - 1):
+        if a[j] > a[j+1]:
+            t = a[j]
+            a[j] = t
+            a[j], a[j + 1] = a[j + 1], a[j]
 f = open(outputFile, "w")
-c = combination.keys()   
-for i in sorted(c) :
-    f.write(combination[i])
+for i in range(len(master)) :
+    f.write(a[i])
