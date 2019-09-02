@@ -43,5 +43,5 @@ for i in range(len(a)):
             a[j] = t
             a[j], a[j + 1] = a[j + 1], a[j]
 f = open(outputFile, "w")
-for i in range(len(master)) :
+for i in range(1,len(master)) :
     f.write(a[i])
