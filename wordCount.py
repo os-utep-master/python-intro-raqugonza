@@ -33,5 +33,6 @@ with open(inputFile, 'r') as inName:
 for i in range(len(master)) :
     combination[i] = master[i] +" " +str(counter[i]) + "\n"
 f = open(outputFile, "w")
-for i in range(len(master)) :
+c = combination.keys()   
+for i in sorted(c) :
     f.write(combination[i])
